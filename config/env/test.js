@@ -3,6 +3,6 @@
 module.exports = {
     env: 'test',
     mongo: {
-        uri: 'mongodb://127.0.0.1:27017/pisignage-test'
+        uri: 'mongodb+srv://ezkow:4590@pisignage.gni79rg.mongodb.net/?retryWrites=true&w=majority'
     }
 };

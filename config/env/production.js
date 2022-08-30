@@ -6,6 +6,6 @@ module.exports = {
     port: process.env.PORT || 3000,
     mongo: {
         uri: process.env.MONGOLAB_URI ||
-            'mongodb://mongo:27017/pisignage-server-dev'
+            'mongodb+srv://ezkow:4590@pisignage.gni79rg.mongodb.net/?retryWrites=true&w=majority'
     }
 };
