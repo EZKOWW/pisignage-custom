@@ -42,7 +42,7 @@
     "nodemon": "latest"
   },
   "scripts": {
-    "start": "./node_modules/.bin/nodemon server.js"
+    "start": "node server.js"
   },
   "license": "(MIT OR Apache-2.0)"
 }
