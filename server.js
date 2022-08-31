@@ -18,7 +18,7 @@ var config = require(path.join(__dirname,'/config/config'));
 
 // Connect to database
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://ezkow:4590@pisignage.gni79rg.mongodb.net/pisignage?retryWrites=true&w=majority', function(error){
+mongoose.connect(process.env.MONGOLAB_URI, function(error){
     if (error) {
 	    console.log(error)
         console.log('********************************************');

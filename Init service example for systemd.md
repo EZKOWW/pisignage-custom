@@ -10,7 +10,7 @@
     [Unit]
     Description=pisignage Player -  Server Software
     #Include the After directive to make sure mongodb is running
-    After=mogodb.service
+    After=mongodb.service
     
     
     [Service]
