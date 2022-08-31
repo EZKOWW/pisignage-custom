@@ -15,11 +15,10 @@ var path = require('path'),
 
 // Application Config
 var config = require(path.join(__dirname,'/config/config'));
-var atlasURL = 'mongodb://ezkow:4590@ac-ev8m1nw-shard-00-00.gni79rg.mongodb.net:27017,ac-ev8m1nw-shard-00-01.gni79rg.mongodb.net:27017,ac-ev8m1nw-shard-00-02.gni79rg.mongodb.net:27017/?ssl=true&replicaSet=atlas-ls58ts-shard-0&authSource=admin&retryWrites=true&w=majority';
 
 // Connect to database
 mongoose.Promise = global.Promise;
-mongoose.connect(atlasURL, function(error){
+mongoose.connect(process.env.MONGODB_URL, function(error){
     if (error) {
 	console.log(error)
         console.log('********************************************');
