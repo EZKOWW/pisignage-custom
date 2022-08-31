@@ -18,9 +18,9 @@ var config = require(path.join(__dirname,'/config/config'));
 
 // Connect to database
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URL, function(error){
+mongoose.connect('mongodb+srv://ezkow:4590@pisignage.gni79rg.mongodb.net/?retryWrites=true&w=majority', function(error){
     if (error) {
-	console.log(error)
+	    console.log(error)
         console.log('********************************************');
         console.log('*          MongoDB Process not running     *');
         console.log('********************************************\n');
