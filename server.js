@@ -151,4 +151,3 @@ process.on('uncaughtException', function(err, origin) {
 
 // Expose app
 module.exports = app;
-
