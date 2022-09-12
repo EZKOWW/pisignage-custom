@@ -13,9 +13,6 @@ var path = require('path'),
     url = require('url'),
     fs = require('fs');
 
-var DYNOS = require('heroku-keep-awake')
-const DYNO_URL = 'https://babillards.herokuapp.com'; // CHANGE THIS UPON URL MODIFICATION
-
 // Application Config
 var config = require(path.join(__dirname,'/config/config'));
 
@@ -133,7 +130,6 @@ require("./app/controllers/server-socket-ws").startSIO(wss);
 require('./app/controllers/scheduler');
 
 server.listen(config.port, function () {
-    wakeDyno(DYNO_URL);
     console.log('Express server listening on port %d in %s mode', config.port, app.get('env'));
 });
 
